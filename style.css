@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--DarkSlateGrey);
+}
+
+/*.content{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.9;
+    background-color: var(--White);
+    z-index: 40000;
+    left: 0;
+    padding: 15px;
+    overflow: hidden;
+}
+.modal{
+ display:block;
+ 
+ justify-content: center;
+ align-items: center;
+ font-family: 'hanken grotesk';
+  top: 0;
+  min-width: 250px;
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 40001;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+  margin-top: 30px;
+  margin-left: 10%;
+
+  animation-name: fadeIn_Modal;
+  animation-duration: 0.8s;
+ 
+}
+.content #thanks{
+ font-family: 'hanken grotesk';
+ font-weight: 400;
+}
+.modal p{
+    font-family: 'hanken grotesk';
+}
+.content btn{
+    background-color: var(--Tomato);
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    color: white!important;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--Tomato);
+    box-shadow: 0px 0px 10px grey;
+}*/
+
+.success {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#address,
+#emailError {
+    display: flex;
+    justify-content: space-between;
+}
+
+.success-content {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    font-family: 'hanken grotesk';
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+}
+
+.success h1 {
+    font-size: 2rem;
+}
+
+.section img {
+    width: 18px;
+}
+
+.success p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+
+.success button {
+    background-image: linear-gradient(to right, #f665d2f8 7%, #fda085 51%, #f6d365 100%);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    width: 300px;
+    height: 40px;
+    border-style: none;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.success img {
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left: 10px;
+    text-align: left;
+}
+
+
+
+.main-container {
+    width: 800px;
+    height: 550px;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 20px;
+
+}
+
+.img {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    padding-right: 15px;
+}
+
+#mobile {
+    display: none;
+}
+
+.container {
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25px;
+    padding-top: 0;
+}
+
+.header {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'hanken grotesk';
+}
+
+.section,
+.footer {
+    font-family: 'hanken grotesk';
+}
+
+#email {
+    width: 80%;
+
+    height: 50%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--Grey);
+}
+
+#open {
+    width: 87%;
+    cursor: pointer;
+    color: var(--White);
+    border-radius: 10px;
+    height: 50%;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--DarkSlateGrey);
+    border: 1px solid var(--CharcoalGrey);
+}
+
+
+@media only screen and (max-width: 450px) {
+    #mobile {
+        content: url("./assets/images/illustration-sign-up-mobile.svg");
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+        margin-right: 1.5rem;
+    }
+
+    .main-container {
+        padding: 0;
+
+        width: 400px;
+        height: 800px;
+        background-color: var(--White);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        border-radius: 20px;
+
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    .success {
+        display: none;
+        flex-direction: column;
+        width: 300px;
+        height: 500px;
+        margin: auto;
+    }
+    .success button{
+        width: 250px;
+        margin-top: 10rem;
+        
+    }
+}
